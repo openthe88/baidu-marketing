@@ -1,3 +1,4 @@
 module github.com/openthe88/baidu-marketing
 
-go 1.20
+go 1.16
+

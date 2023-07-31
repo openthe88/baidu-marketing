@@ -3,7 +3,7 @@ package video
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetVideoRequest 获取视频素材 API Request

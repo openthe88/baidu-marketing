@@ -2,7 +2,7 @@ package newimage
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // UploadImageRequest 上传图片素材API Request

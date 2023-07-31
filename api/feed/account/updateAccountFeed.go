@@ -1,9 +1,9 @@
 package account
 
 import (
-	"github.com/bububa/baidu-marketing/core"
-	"github.com/bububa/baidu-marketing/model"
-	"github.com/bububa/baidu-marketing/model/feed/account"
+	"github.com/openthe88/baidu-marketing/core"
+	"github.com/openthe88/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model/feed/account"
 )
 
 // UpdateAccountFeed 更新账户信息

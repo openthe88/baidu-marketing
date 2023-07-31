@@ -1,9 +1,9 @@
 package campaign
 
 import (
-	"github.com/bububa/baidu-marketing/core"
-	"github.com/bububa/baidu-marketing/model"
-	"github.com/bububa/baidu-marketing/model/search/campaign"
+	"github.com/openthe88/baidu-marketing/core"
+	"github.com/openthe88/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model/search/campaign"
 )
 
 // DeleteCampaign 删除计划

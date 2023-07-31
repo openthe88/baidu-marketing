@@ -2,7 +2,7 @@ package newimage
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetImageRequest （新图片服务（ImageManageService）打通了搜索图库与信息流图库）获取图片素材API Request

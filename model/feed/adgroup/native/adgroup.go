@@ -1,8 +1,8 @@
 package native
 
 import (
-	"github.com/bububa/baidu-marketing/enum"
-	"github.com/bububa/baidu-marketing/model/feed/adgroup"
+	"github.com/openthe88/baidu-marketing/enum"
+	"github.com/openthe88/baidu-marketing/model/feed/adgroup"
 )
 
 // Adgroup 推广单元

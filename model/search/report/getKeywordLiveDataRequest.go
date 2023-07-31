@@ -3,7 +3,7 @@ package report
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetKeywordLiveDataRequest 关键词实时数据 API Request

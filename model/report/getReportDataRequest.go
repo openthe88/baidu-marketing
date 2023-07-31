@@ -2,8 +2,8 @@ package report
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/enum"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/enum"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 type GetReportDataRequest struct {

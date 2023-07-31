@@ -3,9 +3,9 @@ package balance
 import (
 	"time"
 
-	"github.com/bububa/baidu-marketing/core"
-	"github.com/bububa/baidu-marketing/model"
-	"github.com/bububa/baidu-marketing/model/account/balance"
+	"github.com/openthe88/baidu-marketing/core"
+	"github.com/openthe88/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model/account/balance"
 )
 
 // GetAccountTransferHistory 查询转账记录

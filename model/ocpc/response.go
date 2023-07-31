@@ -3,7 +3,7 @@ package ocpc
 import (
 	"encoding/json"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // Response 转化回传返回结果

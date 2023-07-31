@@ -3,7 +3,7 @@ package campaign
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // DeleteCampaignRequest 删除计划 API Request

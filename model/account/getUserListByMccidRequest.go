@@ -3,7 +3,7 @@ package account
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetUserListByMccidRequest 账户管家子账号 API Request

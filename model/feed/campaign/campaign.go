@@ -1,6 +1,6 @@
 package campaign
 
-import "github.com/bububa/baidu-marketing/model"
+import "github.com/openthe88/baidu-marketing/model"
 
 // Campaign 计划对象
 /*

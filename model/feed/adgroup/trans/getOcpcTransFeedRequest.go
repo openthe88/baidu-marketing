@@ -2,7 +2,7 @@ package trans
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 type OcpcTransRequest struct {

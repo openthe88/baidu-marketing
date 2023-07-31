@@ -3,7 +3,7 @@ package image
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetImageRequest 获取图片素材API Request

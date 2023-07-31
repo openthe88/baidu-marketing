@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/bububa/baidu-marketing/core"
-	"github.com/bububa/baidu-marketing/model/ocpc"
+	"github.com/openthe88/baidu-marketing/core"
+	"github.com/openthe88/baidu-marketing/model/ocpc"
 )
 
 // UploadConvertData 广告主回传转化数据接口

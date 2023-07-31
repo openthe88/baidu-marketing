@@ -2,7 +2,7 @@ package native
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetAdgroupFeedRequest 查询推广单元 API Request

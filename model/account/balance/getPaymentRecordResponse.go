@@ -1,6 +1,6 @@
 package balance
 
-import "github.com/bububa/baidu-marketing/model"
+import "github.com/openthe88/baidu-marketing/model"
 
 // GetPaymentRecordResponse 查询付款信息与待加款信息
 type GetPaymentRecordResponse struct {

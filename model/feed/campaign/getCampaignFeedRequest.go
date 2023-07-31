@@ -3,7 +3,7 @@ package campaign
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 /*
@@ -37,7 +37,9 @@ func (r GetCampaignFeedRequest) Url() string {
 	return fmt.Sprintf("%sCampaignFeedService/getCampaignFeed", model.BASE_URL_FEED)
 }
 
-/* CampaignFeedFilter 计划查询过滤条件
+/*
+	CampaignFeedFilter 计划查询过滤条件
+
 bstype 取值范围：枚举值，列表如下
 1 - 普通计划
 3 - 商品计划

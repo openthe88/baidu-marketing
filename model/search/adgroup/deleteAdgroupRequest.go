@@ -3,7 +3,7 @@ package adgroup
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // DeleteAdgroupRequest 删除单元 API Request

@@ -3,7 +3,7 @@ package balance
 import (
 	"fmt"
 
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // GetPaymentRecordRequest 查询付款信息与待加款信息 API Request

@@ -1,8 +1,10 @@
 package creative
 
-import "github.com/bububa/baidu-marketing/model"
+import "github.com/openthe88/baidu-marketing/model"
 
-/* Creative 推广创意
+/*
+	Creative 推广创意
+
 // Pause 可选值
 // true - 暂停
 // false - 启用

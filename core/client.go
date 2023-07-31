@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/bububa/baidu-marketing/core/internal/debug"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/core/internal/debug"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // SDKClient  object

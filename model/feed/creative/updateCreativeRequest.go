@@ -2,7 +2,7 @@ package creative
 
 import (
 	"fmt"
-	"github.com/bububa/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model"
 )
 
 // UpdateCreativeRequest 修改推广创意 API Request

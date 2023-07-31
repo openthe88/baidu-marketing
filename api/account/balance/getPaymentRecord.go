@@ -1,9 +1,9 @@
 package balance
 
 import (
-	"github.com/bububa/baidu-marketing/core"
-	"github.com/bububa/baidu-marketing/model"
-	"github.com/bububa/baidu-marketing/model/account/balance"
+	"github.com/openthe88/baidu-marketing/core"
+	"github.com/openthe88/baidu-marketing/model"
+	"github.com/openthe88/baidu-marketing/model/account/balance"
 )
 
 // GetPaymentRecord 查询付款信息与待加款信息

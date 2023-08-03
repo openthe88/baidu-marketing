@@ -12,9 +12,9 @@
   
   - 账户授权 (api/account/oauth)
     - 获取授权链接 [ GetAppOauth(req oauth.GetAppOauthRequest) (string, error) ]
-    - 换取授权令牌接口 [ GetAccessToken(clt *core.SDKClient, req oauth.GetAccessTokenRequest) (oauth.GetAccessTokenResponse, error) ]
-    - 更新授权令牌接口 [ GetRefreshToken(clt *core.SDKClient, req oauth.GetRefreshTokenRequest) (oauth.GetRefreshTokenResponse, error) ]
-    - 查询授权用户信息 [ GetUserInfo(clt *core.SDKClient, req oauth.GetUserInfoRequest) (oauth.GetUserInfoResponse, error) ]
+    - 换取授权令牌接口 [ GetAccessToken(clt *core.SDKClient, req oauth.GetAccessTokenRequest) (oauth.AccessTokenData, error) ]
+    - 更新授权令牌接口 [ GetRefreshToken(clt *core.SDKClient, req oauth.GetRefreshTokenRequest) (oauth.RefreshTokenData, error) ]
+    - 查询授权用户信息 [ GetUserInfo(clt *core.SDKClient, req oauth.GetUserInfoRequest) (oauth.UserInfoData, error) ]
 
   - 财务管理 (api/account/balance)
     

@@ -9,12 +9,22 @@
 [![GitHub release](https://img.shields.io/github/release/bububa/baidu-marketing.svg)](https://github.com/openthe88/baidu-marketing/releases/)
 
 - 账户管理
+  
+  - 账户授权 (api/account/oauth)
+    - 获取授权链接 [ GetAppOauth(req oauth.GetAppOauthRequest) (string, error) ]
+    - 换取授权令牌接口 [ GetAccessToken(clt *core.SDKClient, req oauth.GetAccessTokenRequest) (oauth.GetAccessTokenResponse, error) ]
+    - 更新授权令牌接口 [ GetRefreshToken(clt *core.SDKClient, req oauth.GetRefreshTokenRequest) (oauth.GetRefreshTokenResponse, error) ]
+    - 查询授权用户信息 [ GetUserInfo(clt *core.SDKClient, req oauth.GetUserInfoRequest) (oauth.GetUserInfoResponse, error) ]
+
   - 财务管理 (api/account/balance)
+    
     - 查询账户余额成分 [ GetBalanceInfo(clt \*core.SDKClient, auth model.RequestHeader, productIds[]int64) ([]balance.BalanceInfo, error) ]
     - 查询转账记录 [ GetAccountTransferHistory(clt \*core.SDKClient, auth model.RequestHeader, startTime time.Time, endTime time.Time) ([]balance.AccountTransferHistory, error) ]
     - 查询待加款信息 [ GetPaymentHistory(clt \*core.SDK, auth model.RequestHeader, reqBody balance.GetPaymentHistoryRequest) ([]balance.PaymentHistory, error) ]
     - 查询付款信息与待加款信息 [ GetPaymentRecord(clt *core.SDK, auth model.RequestHeader, reqBody balance.GetPaymentRecordRequest) (*balance.GetPaymentRecordResponse, error) ]
+    
   - 账户管家管理 [ GetUserListByMccid(clt \*core.SDK, auth model.RequestHeader) ([]account.MccUser, error) ]
+  
 - 搜索广告投放 (api/search)
   - 账户 (api/search/account)
     - 查询账户 [ GetAccountInfo(clt \*core.SDKClient, auth model.RequestHeader, accountFields []string) ([]account.Account, error) ]
@@ -34,6 +44,7 @@
     - 添加创意 [ AddCreative(clt *core.SDKClient, auth model.RequestHeader, reqBody *creative.AddCreativeRequest) ([]creative.Creative, error) ]
     - 更新创意 [ UpdateCreative(clt \*core.SDKClient, auth model.RequestHeader, creatives []creative.Creative) ([]creative.Creative, error) ]
     - 删除创意 [ DeleteCreative(clt \*core.SDKClient, auth model.RequestHeader, creativeIds []int64) error ]
+  
 - 信息流广告投放 (api/feed)
   - 账户 (api/feed/account)
     - 查询账户 [ GetAccountFeed(clt \*core.SDKClient, auth model.RequestHeader, accountFields []string) ([]account.Account, error) ]
@@ -56,6 +67,7 @@
     - 添加创意 [ AddCreative(clt *core.SDKClient, auth model.RequestHeader, reqBody *creative.AddCreativeRequest) ([]creative.Creative, error) ]
     - 更新创意 [ UpdateCreative(clt \*core.SDKClient, auth model.RequestHeader, creatives []creative.Creative) ([]creative.Creative, error) ]
     - 删除创意 [ DeleteCreative(clt \*core.SDKClient, auth model.RequestHeader, creativeFeedIds []int64) error ]
+  
 - 搜索报告 (api/search/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 账户实时数据 [ GetAccountLiveData(clt \*core.SDKClient, auth model.RequestHeader, dataType int, device int) ([]report.AccountLiveData, error) ]
@@ -63,20 +75,24 @@
   - 创建异步报告，获取报告 ID(reportId) [ GetProfessionalReportId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
   - 获取异步报告状态 [ GetReportState(clt *core.SDKClient, auth model.RequestHeader, reportId string) (int, error) ]
   - 获取异步报告文件 URL [ GetReportFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
+  
 - 信息流报告 (api/feed/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 创建异步报告，获取报告 ID(reportId) [ GetReportFeedId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
   - 获取异步报告状态 [ GetReportFeedState(clt *core.SDKClient, auth model.RequestHeader, reportId string) (int, error) ]
   - 获取异步报告文件 URL [ GetReportFeedFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
+  
 - 资产管理 (api/asset)
   - 图片 (api/asset/image)
     - 查询图片 [ GetImage(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetImageRequest) ([]image.Image, error) ]
   - 视频 (api/asset/video)
     - 查询图片 [ GetVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetVideoRequest) ([]video.Video, error) ]
+  
 - 转化上报 (api/ocpc)
   - 广告主回传转化数据接口 [ UploadConvertData(clt *core.SDKClient, req *ocpc.UploadConvertDataRequest) error ]
   - 广告主回传无效转化数据接口 [ UploadInvalidConvertData(clt *core.SDKClient, req *ocpc.UploadInvalidConvertDataRequest) error ]
   - APP 转化数据收集 [ ActionCb(req *ocpc.ActionCbRequest) error ]
+  
 - 数据报告（api/report）
   - 信息流报告
     - 推广报告

@@ -68,19 +68,23 @@
     - 更新创意 [ UpdateCreative(clt \*core.SDKClient, auth model.RequestHeader, creatives []creative.Creative) ([]creative.Creative, error) ]
     - 删除创意 [ DeleteCreative(clt \*core.SDKClient, auth model.RequestHeader, creativeFeedIds []int64) error ]
   
-- 搜索报告 (api/search/report)
+- 搜索报告(旧) (api/search/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 账户实时数据 [ GetAccountLiveData(clt \*core.SDKClient, auth model.RequestHeader, dataType int, device int) ([]report.AccountLiveData, error) ]
   - 关键词实时数据 [ GetKeywordLiveData(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.GetKeywordLiveDataRequest) ([]report.KeywordLiveData, error) ]
   - 创建异步报告，获取报告 ID(reportId) [ GetProfessionalReportId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
   - 获取异步报告状态 [ GetReportState(clt *core.SDKClient, auth model.RequestHeader, reportId string) (int, error) ]
   - 获取异步报告文件 URL [ GetReportFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
+- 搜索报告 (api/search/reportv2)
+  - 账户报告 [  ]
   
-- 信息流报告 (api/feed/report)
+- 信息流报告(旧) (api/feed/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 创建异步报告，获取报告 ID(reportId) [ GetReportFeedId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
   - 获取异步报告状态 [ GetReportFeedState(clt *core.SDKClient, auth model.RequestHeader, reportId string) (int, error) ]
   - 获取异步报告文件 URL [ GetReportFeedFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
+- 信息流报表 (api/feed/reportv2)
+- 账户报告 [ GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) ]
   
 - 资产管理 (api/asset)
   - 图片 (api/asset/image)

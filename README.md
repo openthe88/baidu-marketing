@@ -77,7 +77,9 @@
   - 获取异步报告文件 URL [ GetReportFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
 - 搜索报告 (api/search/reportv2)
   - 账户报告 [ GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) ]
-  
+  - 计划报告 [ GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) ]
+  - 单元报告 [ GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) ]
+
 - 信息流报告(旧) (api/feed/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 创建异步报告，获取报告 ID(reportId) [ GetReportFeedId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
@@ -85,8 +87,8 @@
   - 获取异步报告文件 URL [ GetReportFeedFileUrl(clt *core.SDKClient, auth model.RequestHeader, reportId string) (string, error) ]
 - 信息流报表 (api/feed/reportv2)
   - 账户报告 [ GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) ]
-  - 计划报告 [ GetProjectData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) ]
-  - 单元报告 [ GetCellData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) ]
+  - 计划报告 [ GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) ]
+  - 单元报告 [ GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) ]
   
 - 资产管理 (api/asset)
   - 图片 (api/asset/image)

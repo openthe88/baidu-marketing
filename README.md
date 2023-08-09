@@ -23,7 +23,7 @@
     - 查询待加款信息 [ GetPaymentHistory(clt \*core.SDK, auth model.RequestHeader, reqBody balance.GetPaymentHistoryRequest) ([]balance.PaymentHistory, error) ]
     - 查询付款信息与待加款信息 [ GetPaymentRecord(clt *core.SDK, auth model.RequestHeader, reqBody balance.GetPaymentRecordRequest) (*balance.GetPaymentRecordResponse, error) ]
     
-  - 账户管家管理 [ GetUserListByMccid(clt \*core.SDK, auth model.RequestHeader) ([]account.MccUser, error) ]
+  - 账户管家管理1 [ GetUserListByMccid(clt \*core.SDK, auth model.RequestHeader) ([]account.MccUser, error) ]
   
 - 搜索广告投放 (api/search)
   - 账户 (api/search/account)

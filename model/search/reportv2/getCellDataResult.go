@@ -4,12 +4,16 @@ import "encoding/json"
 
 // GetCellDataResult 单元报表返回参
 type GetCellDataResult struct {
-	RowCount      int        `json:"rowCount,omitempty" dc:"记录数"`
-	TotalRowCount int        `json:"totalRowCount,omitempty" dc:"总记录数"`
-	Rows          []CellData `json:"rows,omitempty" dc:"数据"`
+	Data []CellData `json:"data,omitempty" dc:"数据"`
 }
 
 type CellData struct {
+	RowCount      int            `json:"rowCount,omitempty" dc:"记录数"`
+	TotalRowCount int            `json:"totalRowCount,omitempty" dc:"总记录数"`
+	Rows          []CellDataInfo `json:"rows,omitempty" dc:"数据列表"`
+}
+
+type CellDataInfo struct {
 	Date              string      `json:"date,omitempty" dc:"日期"`
 	UserName          string      `json:"userName,omitempty" dc:"账号名称"`
 	CampaignId        int64       `json:"campaignId,omitempty" dc:"推广计划ID"`

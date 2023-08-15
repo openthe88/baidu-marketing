@@ -4,12 +4,16 @@ import "encoding/json"
 
 // GetProjectDataResult 单元报表返回参
 type GetProjectDataResult struct {
-	RowCount      int           `json:"rowCount,omitempty" dc:"记录数"`
-	TotalRowCount int           `json:"totalRowCount,omitempty" dc:"总记录数"`
-	Rows          []ProjectData `json:"rows,omitempty" dc:"数据"`
+	Data []ProjectData `json:"data,omitempty" dc:"数据"`
 }
 
 type ProjectData struct {
+	RowCount      int               `json:"rowCount,omitempty" dc:"记录数"`
+	TotalRowCount int               `json:"totalRowCount,omitempty" dc:"总记录数"`
+	Rows          []ProjectDataInfo `json:"rows,omitempty" dc:"数据列表"`
+}
+
+type ProjectDataInfo struct {
 	Date              string      `json:"date,omitempty" dc:"日期"`
 	UserName          string      `json:"userName,omitempty" dc:"账号名称"`
 	CampaignId        int64       `json:"campaignId,omitempty" dc:"推广计划ID"`

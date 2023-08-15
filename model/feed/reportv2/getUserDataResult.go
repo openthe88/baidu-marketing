@@ -4,12 +4,16 @@ import "encoding/json"
 
 // GetUserDataResult 账户报表返回参
 type GetUserDataResult struct {
-	RowCount      int        `json:"rowCount,omitempty" dc:"记录数"`
-	TotalRowCount int        `json:"totalRowCount,omitempty" dc:"总记录数"`
-	Rows          []UserData `json:"rows,omitempty" dc:"数据"`
+	Data []UserData `json:"data,omitempty" dc:"数据"`
 }
 
 type UserData struct {
+	RowCount      int            `json:"rowCount,omitempty" dc:"记录数"`
+	TotalRowCount int            `json:"totalRowCount,omitempty" dc:"总记录数"`
+	Rows          []UserDataInfo `json:"rows,omitempty" dc:"数据列表"`
+}
+
+type UserDataInfo struct {
 	Date              string      `json:"date,omitempty" dc:"日期"`
 	UserName          string      `json:"userName,omitempty" dc:"账号名称"`
 	Impression        int64       `json:"impression,omitempty" dc:"展现"`

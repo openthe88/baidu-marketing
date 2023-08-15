@@ -10,8 +10,8 @@ type GetUserDataResult struct {
 }
 
 type UserData struct {
-	Date              int64       `json:"date,omitempty" dc:"日期"`
-	UserName          int64       `json:"userName,omitempty" dc:"账号"`
+	Date              string      `json:"date,omitempty" dc:"日期"`
+	UserName          string      `json:"userName,omitempty" dc:"账号名称"`
 	Impression        int64       `json:"impression,omitempty" dc:"展现"`
 	Click             int64       `json:"click,omitempty" dc:"点击"`
 	Cost              json.Number `json:"cost,omitempty" dc:"消费"`

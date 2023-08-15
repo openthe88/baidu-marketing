@@ -7,7 +7,7 @@ import (
 )
 
 // GetCellData 单元报表
-func GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) {
+func GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, reportv2.GetCellDataResult, error) {
 	cellDataRequest.ReportType = `2284618`
 	req := &model.Request{
 		Header: auth,
@@ -15,5 +15,5 @@ func GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest 
 	}
 	var resp reportv2.GetCellDataResult
 	header, err := clt.Do(req, &resp)
-	return header, resp.Data, err
+	return header, resp, err
 }

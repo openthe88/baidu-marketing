@@ -4,10 +4,14 @@ import "encoding/json"
 
 // GetUserDataResult 账户报表返回参
 type GetUserDataResult struct {
-	Data []UserData `json:"data,omitempty" dc:"数据"`
+	RowCount      int        `json:"rowCount,omitempty" dc:"记录数"`
+	TotalRowCount int        `json:"totalRowCount,omitempty" dc:"总记录数"`
+	Rows          []UserData `json:"rows,omitempty" dc:"数据"`
 }
 
 type UserData struct {
+	Date              string      `json:"date,omitempty" dc:"日期"`
+	UserName          string      `json:"userName,omitempty" dc:"账号名称"`
 	Impression        int64       `json:"impression,omitempty" dc:"展现"`
 	Click             int64       `json:"click,omitempty" dc:"点击"`
 	Cost              json.Number `json:"cost,omitempty" dc:"消费"`

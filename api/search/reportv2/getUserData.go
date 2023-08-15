@@ -7,7 +7,7 @@ import (
 )
 
 // GetUserData 账户报表
-func GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) {
+func GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, reportv2.GetUserDataResult, error) {
 	userDataRequest.ReportType = `2208157`
 	req := &model.Request{
 		Header: auth,
@@ -15,5 +15,5 @@ func GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest 
 	}
 	var resp reportv2.GetUserDataResult
 	header, err := clt.Do(req, &resp)
-	return header, resp.Data, err
+	return header, resp, err
 }

@@ -7,7 +7,7 @@ import (
 )
 
 // GetProjectData 计划报表
-func GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) {
+func GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, reportv2.GetProjectDataResult, error) {
 	projectDataRequest.ReportType = `2276038`
 	req := &model.Request{
 		Header: auth,
@@ -15,5 +15,5 @@ func GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRe
 	}
 	var resp reportv2.GetProjectDataResult
 	header, err := clt.Do(req, &resp)
-	return header, resp.Data, err
+	return header, resp, err
 }

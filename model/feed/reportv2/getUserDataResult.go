@@ -4,7 +4,9 @@ import "encoding/json"
 
 // GetUserDataResult 账户报表返回参
 type GetUserDataResult struct {
-	Data []UserData `json:"data,omitempty" dc:"数据"`
+	RowCount      int        `json:"rowCount,omitempty" dc:"记录数"`
+	TotalRowCount int        `json:"totalRowCount,omitempty" dc:"总记录数"`
+	Rows          []UserData `json:"data,omitempty" dc:"数据"`
 }
 
 type UserData struct {

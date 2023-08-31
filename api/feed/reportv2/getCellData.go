@@ -6,7 +6,7 @@ import (
 	"github.com/openthe88/baidu-marketing/model/feed/reportv2"
 )
 
-// GetUserData 单元报表
+// GetCellData 单元报表
 func GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, reportv2.GetCellDataResult, error) {
 	cellDataRequest.ReportType = `2330652`
 	req := &model.Request{

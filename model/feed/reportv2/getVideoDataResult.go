@@ -18,9 +18,9 @@ type VideoDataInfo struct {
 	UserName           string      `json:"userName,omitempty" dc:"账号名称"`
 	IdeaId             int64       `json:"ideaId,omitempty" dc:"创意ID"`
 	VideoId            int64       `json:"videoId,omitempty" dc:"视频ID"`
-	VideoMD5           int64       `json:"videoMD5,omitempty" dc:"视频文件签名"`
-	VideoName          int64       `json:"videoName,omitempty" dc:"视频名称"`
-	VideoNameStatus    int64       `json:"videoNameStatus,omitempty" dc:"视频名称"`
+	VideoMD5           string      `json:"videoMD5,omitempty" dc:"视频文件签名"`
+	VideoName          string      `json:"videoName,omitempty" dc:"视频名称"`
+	VideoNameStatus    string      `json:"videoNameStatus,omitempty" dc:"视频名称"`
 	VideoInfo          VideoInfo   `json:"videoInfo,omitempty" dc:"视频内容预览"`
 	CampaignId         int64       `json:"campaignId,omitempty" dc:"推广计划ID"`
 	CampaignStatus     string      `json:"campaignStatus,omitempty" dc:"推广计划状态"`

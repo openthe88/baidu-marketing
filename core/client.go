@@ -16,6 +16,7 @@ type SDKClient struct {
 	username  string
 	password  string
 	debug     bool
+	header    map[string]string // Custom header map.
 }
 
 // NewSDKClient init sdk client
@@ -45,6 +46,11 @@ func (c *SDKClient) SetUser(username string, password string) {
 // SetDebug set debug mode
 func (c *SDKClient) SetDebug(debug bool) {
 	c.debug = debug
+}
+
+// SetHeader sets a custom HTTP header pair for the client.
+func (c *SDKClient) SetHeader(key, value string) {
+	c.header[key] = value
 }
 
 // Do execute api request
@@ -91,7 +97,13 @@ func (c *SDKClient) Post(reqUrl string, reqBytes []byte, resp interface{}) error
 	if err != nil {
 		return err
 	}
-	httpReq.Header.Add("Content-Type", "application/json;charset=utf-8")
+	contType, ok := c.header["Content-Type"]
+	if !ok {
+		httpReq.Header.Add("Content-Type", "application/json;charset=utf-8")
+	} else {
+		httpReq.Header.Add("Content-Type", contType)
+	}
+
 	httpResp, err := http.DefaultClient.Do(httpReq)
 	if err != nil {
 		return err

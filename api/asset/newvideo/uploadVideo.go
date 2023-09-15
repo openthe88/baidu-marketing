@@ -13,6 +13,7 @@ func UploadVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *video2.
 		Body:   reqBody,
 	}
 	var resp []video2.UploadVideoResponse
+	clt.SetHeader(`Content-Type`, `multipart/form-data`)
 	header, err := clt.Do(req, &resp)
 	return header, resp, err
 }

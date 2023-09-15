@@ -49,7 +49,7 @@ type Image struct {
 	// Desc 修改时间
 	ModTime string `json:"modTime,omitempty"`
 	// IsCollected 图片收藏
-	IsCollected *bool `json:"isCollected,omitempty"`
+	IsCollected int `json:"isCollected,omitempty"`
 	// Source 图片来源类型
 	SourceType int `json:"sourceType,omitempty"`
 	// ImageName 图片名称;只有有图片名称的才会返回，没有图片名称（即名称为空）时不会返回 。如上传图片时设置该字段将会返回

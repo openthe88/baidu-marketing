@@ -9,8 +9,8 @@ import (
 type GetImageRequest struct {
 	// Filters 过滤条件
 	Filters []FilterCondition `json:"filters,omitempty"`
-	// Page 当前页；选填，默认为1
-	Page int `json:"pageNo,omitempty"`
+	// PageNo 当前页；选填，默认为1
+	PageNo int `json:"pageNo,omitempty"`
 	// PageSize 当前页大小；选填 ， 默认40，范围（0, 1000)
 	PageSize int `json:"pageSize,omitempty"`
 }
@@ -33,4 +33,6 @@ type FilterCondition struct {
 	Field string `json:"field,omitempty"`
 	// OP 操作符
 	OP string `json:"op,omitempty"`
+	//过滤值
+	Value string `json:"value,omitempty"`
 }

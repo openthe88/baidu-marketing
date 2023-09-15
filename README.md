@@ -24,7 +24,6 @@
     - 查询付款信息与待加款信息 [ GetPaymentRecord(clt *core.SDK, auth model.RequestHeader, reqBody balance.GetPaymentRecordRequest) (*balance.GetPaymentRecordResponse, error) ]
     
   - 账户管家管理 [ GetUserListByMccid(clt \*core.SDK, auth model.RequestHeader) ([]account.MccUser, error) ]
-  
 - 搜索广告投放 (api/search)
   - 账户 (api/search/account)
     - 查询账户 [ GetAccountInfo(clt \*core.SDKClient, auth model.RequestHeader, accountFields []string) ([]account.Account, error) ]
@@ -44,7 +43,6 @@
     - 添加创意 [ AddCreative(clt *core.SDKClient, auth model.RequestHeader, reqBody *creative.AddCreativeRequest) ([]creative.Creative, error) ]
     - 更新创意 [ UpdateCreative(clt \*core.SDKClient, auth model.RequestHeader, creatives []creative.Creative) ([]creative.Creative, error) ]
     - 删除创意 [ DeleteCreative(clt \*core.SDKClient, auth model.RequestHeader, creativeIds []int64) error ]
-  
 - 信息流广告投放 (api/feed)
   - 账户 (api/feed/account)
     - 查询账户 [ GetAccountFeed(clt \*core.SDKClient, auth model.RequestHeader, accountFields []string) ([]account.Account, error) ]
@@ -67,7 +65,6 @@
     - 添加创意 [ AddCreative(clt *core.SDKClient, auth model.RequestHeader, reqBody *creative.AddCreativeRequest) ([]creative.Creative, error) ]
     - 更新创意 [ UpdateCreative(clt \*core.SDKClient, auth model.RequestHeader, creatives []creative.Creative) ([]creative.Creative, error) ]
     - 删除创意 [ DeleteCreative(clt \*core.SDKClient, auth model.RequestHeader, creativeFeedIds []int64) error ]
-  
 - 搜索报告(旧) (api/search/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 账户实时数据 [ GetAccountLiveData(clt \*core.SDKClient, auth model.RequestHeader, dataType int, device int) ([]report.AccountLiveData, error) ]
@@ -79,7 +76,6 @@
   - 账户报告 [ GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) ]
   - 计划报告 [ GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) ]
   - 单元报告 [ GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) ]
-
 - 信息流报告(旧) (api/feed/report)
   - 推广报告 [ GetRealTimeData(clt *core.SDKClient, auth model.RequestHeader, realTimeRequest *report.ReqlTimeRequest) ([]report.RealTimeResult, error) ]
   - 创建异步报告，获取报告 ID(reportId) [ GetReportFeedId(clt *core.SDKClient, auth model.RequestHeader, reqBody *report.ReportRequest) (string, error) ]
@@ -89,18 +85,21 @@
   - 账户报告 [ GetUserData(clt *core.SDKClient, auth model.RequestHeader, userDataRequest *reportv2.GetUserDataRequest) (*model.ResponseHeader, []reportv2.UserData, error) ]
   - 计划报告 [ GetProjectData(clt *core.SDKClient, auth model.RequestHeader, projectDataRequest *reportv2.GetProjectDataRequest) (*model.ResponseHeader, []reportv2.ProjectData, error) ]
   - 单元报告 [ GetCellData(clt *core.SDKClient, auth model.RequestHeader, cellDataRequest *reportv2.GetCellDataRequest) (*model.ResponseHeader, []reportv2.CellData, error) ]
-  
 - 资产管理 (api/asset)
   - 图片 (api/asset/image)
-    - 查询图片 [ GetImage(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetImageRequest) ([]image.Image, error) ]
+    - 查询图片(旧版) [ GetImage(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetImageRequest) ([]image.Image, error) ]
+  - 图片V2 (api/asset/newimage)
+    - 上传图片[UploadImage(clt *core.SDKClient, auth model.RequestHeader, reqBody *image2.UploadImageRequest) (*model.ResponseHeader, []image2.Image, error)]
+    - 查询图片[GetImage(clt *core.SDKClient, auth model.RequestHeader, reqBody *image2.GetImageRequest) (*model.ResponseHeader, image2.GetImageResponse, error)]
   - 视频 (api/asset/video)
-    - 查询图片 [ GetVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetVideoRequest) ([]video.Video, error) ]
-  
+    - 查询视频(旧版) [ GetVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *image.GetVideoRequest) ([]video.Video, error) ]
+  - 视频V2 (api/asset/newvideo)
+    - 上传视频[UploadVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *video2.UploadVideoRequest) (*model.ResponseHeader, []video2.UploadVideoResponse, error)]
+    - 查询视频[GetVideo(clt *core.SDKClient, auth model.RequestHeader, reqBody *video2.GetVideoRequest) (*model.ResponseHeader, []video2.GetVideoResponse, error)]
 - 转化上报 (api/ocpc)
   - 广告主回传转化数据接口 [ UploadConvertData(clt *core.SDKClient, req *ocpc.UploadConvertDataRequest) error ]
   - 广告主回传无效转化数据接口 [ UploadInvalidConvertData(clt *core.SDKClient, req *ocpc.UploadInvalidConvertDataRequest) error ]
   - APP 转化数据收集 [ ActionCb(req *ocpc.ActionCbRequest) error ]
-  
 - 数据报告（api/report）
   - 信息流报告
     - 推广报告

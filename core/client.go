@@ -24,6 +24,7 @@ func NewSDKClient(token string, ocpcToken string) *SDKClient {
 	return &SDKClient{
 		token:     token,
 		ocpcToken: ocpcToken,
+		header:    make(map[string]string),
 	}
 }
 

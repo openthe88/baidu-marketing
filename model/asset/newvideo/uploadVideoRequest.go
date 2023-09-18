@@ -25,7 +25,7 @@ type VideoParams struct {
 	//13 - 搜索推广
 	//20 - 基木鱼
 	//35 - 电商
-	Source       string `json:"source" dc:"必填，视频来源产品线"`
+	Source       int    `json:"source" dc:"必填，视频来源产品线"`
 	VideoName    string `json:"videoName" dc:"填，视频名称"`
 	HttpProtocol string `json:"httpProtocol,omitempty" dc:"选填，默认 HTTP， 可选值:HTTP、 HTTPS"`
 }

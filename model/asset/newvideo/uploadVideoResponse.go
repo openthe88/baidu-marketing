@@ -2,6 +2,10 @@ package newvideo
 
 // UploadVideoResponse 上传视频返回参数
 type UploadVideoResponse struct {
+	Data []Video `json:"data,omitempty"`
+}
+
+type Video struct {
 	AddTime        string  `json:"addTime,omitempty" dc:"添加时间"`
 	AudioRate      float64 `json:"audioRate,omitempty" dc:"音频码率 kbps"`
 	AuditContent   string  `json:"auditContent,omitempty" dc:"待审核视频信息"`

@@ -1,5 +1,7 @@
 package model
 
+import "os"
+
 // RequestHeader 请求header对象
 type RequestHeader struct {
 	// Username 推广账户名称
@@ -29,6 +31,13 @@ type Request struct {
 	Header RequestHeader `json:"header"`
 	// Body 业务对象
 	Body RequestBody `json:"body"`
+}
+
+// FileRequest 文件请求体
+type FileRequest struct {
+	File  *os.File
+	Name  string `json:"name" dc:"文件名"`
+	Filed string `json:"filed" dc:"字段名"`
 }
 
 // Url 请求API 地址

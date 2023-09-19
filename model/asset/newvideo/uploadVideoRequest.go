@@ -3,15 +3,14 @@ package newvideo
 import (
 	"fmt"
 	"github.com/openthe88/baidu-marketing/model"
+	"os"
 )
 
 // UploadVideoRequest 上传视频
 type UploadVideoRequest struct {
-	UserName    string      `json:"userName" dc:"必填， 推广账户(被授权账户)"`
-	AccessToken string      `json:"accessToken" dc:"必填，权限代码"`
-	File        string      `json:"file" dc:"必填，上传视频文件路径"`
-	Signature   string      `json:"signature" dc:"必填，视频文件md5签名"`
-	Params      VideoParams `json:"params" dc:"必填，标准json格式，接口业务请求参数"`
+	File      *os.File    `json:"fileUrl" dc:"必填，上传文件实体"`
+	Signature string      `json:"signature" dc:"必填，视频文件md5签名"`
+	Params    VideoParams `json:"params" dc:"必填，标准json格式，接口业务请求参数"`
 }
 
 func (r UploadVideoRequest) Url() string {

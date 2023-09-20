@@ -3,12 +3,12 @@ package newvideo
 import (
 	"fmt"
 	"github.com/openthe88/baidu-marketing/model"
-	"os"
+	"io"
 )
 
 // UploadVideoRequest 上传视频
 type UploadVideoRequest struct {
-	File      *os.File    `json:"fileUrl" dc:"必填，上传文件实体"`
+	File      io.Reader   `json:"fileUrl" dc:"必填，文件reader流"`
 	Signature string      `json:"signature" dc:"必填，视频文件md5签名"`
 	Params    VideoParams `json:"params" dc:"必填，标准json格式，接口业务请求参数"`
 }

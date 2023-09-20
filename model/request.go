@@ -1,6 +1,8 @@
 package model
 
-import "os"
+import (
+	"io"
+)
 
 // RequestHeader 请求header对象
 type RequestHeader struct {
@@ -35,7 +37,7 @@ type Request struct {
 
 // FileRequest 文件请求体
 type FileRequest struct {
-	File  *os.File
+	File  io.Reader
 	Name  string `json:"name" dc:"文件名"`
 	Filed string `json:"filed" dc:"字段名"`
 }
